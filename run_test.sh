@@ -74,7 +74,8 @@ tx=$(echo ${iperf_result} | jq -r '.end.sum_sent.bits_per_second')
 rx=$(echo "scale=2; ${rx} / 1000000" | bc)
 tx=$(echo "scale=2; ${tx} / 1000000" | bc)
 
-husarnet version
+husarnet_server husarnet version
+husarnet_client husarnet version
 echo "RX: ${rx} Mbps, TX: ${tx} Mbps"
 
 # Clean up
