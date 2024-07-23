@@ -20,6 +20,9 @@ BAD_COMMIT=$2
 METRIC=$3
 VALUE=$4
 
+sudo apt-get update > /dev/null
+sudo apt-get install jq > /dev/null
+
 # Clone the repository
 if [ -d "repo" ]; then
     git -C repo reset --hard
